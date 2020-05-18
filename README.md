@@ -1,5 +1,13 @@
 [toc]
 
+> 友情提示：近期在升级和优化该项目，建议先 Star 本项目。主要在做几个事情：
+> 
+> * 1、微服务技术选型以 Spring Cloud Alibaba 为中心。
+> * 2、修改项目分层，并合并部分服务，简化整体服务的复杂性。
+> * 3、解决下演示环境，特别是访问速度。
+> 
+> 交流群：[传送门](http://www.iocoder.cn/mall-user-group/?vip&gitee)
+
 # 前言
 
 基于微服务的思想，构建在 B2C 电商场景下的项目实战。
@@ -24,6 +32,8 @@
 
 近期准备开发如下功能：
 
+> 🔥 ：近期会更新新的项目分层结构。
+
 1. 微信 H5 网页登陆 @To0R𓃰
 2. 订单评价 @wang171776704
 3. 商品品牌 @黑子
@@ -44,13 +54,13 @@
 
 ## H5 商城
 
-[体验传送门](http://h5.shop.iocoder.cn:18099)
+[体验传送门](http://h5.shop.iocoder.cn)
 
 ![GIF 图-耐心等待](https://raw.githubusercontent.com/YunaiV/Blog/master/Mall/onemall-h5-min.gif)
 
 ## 管理后台
 
-[体验传送门](http://admin.shop.iocoder.cn:18099)
+[体验传送门](http://admin.shop.iocoder.cn)
 
 * 账号：yudaoyuanma
 * 密码：yudaoyuanma
@@ -65,8 +75,10 @@
 
 **SkyWalking UI**
 
-* 地址：http://skywalking-ui.shop.iocoder.cn:18099
+* 地址：<http://skywalking.shop.iocoder.cn>
 * 管理员账号：admin / admin
+
+> 教程：[《芋道 SkyWalking 安装部署》](http://www.iocoder.cn/SkyWalking/install/?onemall)
 
 **Grafana UI**
 
@@ -81,18 +93,23 @@
 
 **RocketMQ Console**
 
-* 地址：http://rocketmq-console.shop.iocoder.cn:18099
-* 管理员账号：admin / RPsa2GHjTNs8pxEU
+* 地址：<http://rocketmq.shop.iocoder.cn>
 
-**Sentinel Console**
-
-* 地址：http://sentinel.shop.iocoder.cn:18099
-* 账号：sentinel / sentinel
+> 教程：[《芋道 RocketMQ 安装部署》](http://www.iocoder.cn/RocketMQ/install/?onemall)
 
 **XXL-Job Console**
 
-* 地址：http://job-console.shop.iocoder.cn:18099
+* 地址：<http://job.shop.iocoder.cn>
 * 管理员账号：admin / 233666
+
+> 教程：[《芋道 RocketMQ 安装部署》](http://www.iocoder.cn/XXL-JOB/install/?onemall)
+
+**Sentinel Console**
+
+* 地址：<http://sentinel.shop.iocoder.cn>
+* 账号：sentinel / sentinel
+
+> 教程：[《芋道 Sentinel 安装部署》](http://www.iocoder.cn/Sentinel/install/?onemall)
 
 # 技术
 
@@ -110,13 +127,13 @@ TODO 此处应有一个架构图的装逼 JPG 图。
 | --- | --- | --- | --- |
 | `admin-web` | 【前端】管理后台 | HTTP 8080 | |
 | `mobile-web` | 【前端】商城 H5 | HTTP 8000 | |
-| `system-application` | 管理员 HTTP 服务 | HTTP 18083 | [接口文档](http://api.shop.iocoder.cn:18099/admin-api/doc.html) |
-| `user-application` | 用户 HTTP 服务 | HTTP 18082 | [接口文档](http://api.shop.iocoder.cn:18099/user-api/doc.html) |
-| `product-application` | 商品 HTTP 服务 | HTTP 18081 | [接口文档](http://api.shop.iocoder.cn:18099/product-api/doc.html) |
-| `pay-application` | 支付 HTTP 服务 | HTTP 18084 | [接口文档](http://api.shop.iocoder.cn:18099/pay-api/doc.html) |
-| `promotion-application` | 促销 HTTP 服务 | HTTP 18085 | [接口文档](http://api.shop.iocoder.cn:18099/promotion-api/doc.html) |
-| `search-application` | 搜索 HTTP 服务 | HTTP 18086 | [接口文档](http://api.shop.iocoder.cn:18099/search-api/doc.html) |
-| `order-application` | 订单 HTTP 服务 | HTTP 18088 | [接口文档](http://api.shop.iocoder.cn:18099/order-api/doc.html) |
+| `system-application` | 管理员 HTTP 服务 | HTTP 18083 | [接口文档](http://api.shop.iocoder.cn/admin-api/doc.html) |
+| `user-application` | 用户 HTTP 服务 | HTTP 18082 | [接口文档](http://api.shop.iocoder.cn/user-api/doc.html) |
+| `product-application` | 商品 HTTP 服务 | HTTP 18081 | [接口文档](http://api.shop.iocoder.cn/product-api/doc.html) |
+| `pay-application` | 支付 HTTP 服务 | HTTP 18084 | [接口文档](http://api.shop.iocoder.cn/pay-api/doc.html) |
+| `promotion-application` | 促销 HTTP 服务 | HTTP 18085 | [接口文档](http://api.shop.iocoder.cn/promotion-api/doc.html) |
+| `search-application` | 搜索 HTTP 服务 | HTTP 18086 | [接口文档](http://api.shop.iocoder.cn/search-api/doc.html) |
+| `order-application` | 订单 HTTP 服务 | HTTP 18088 | [接口文档](http://api.shop.iocoder.cn/order-api/doc.html) |
 
 -------
 
@@ -160,7 +177,7 @@ TODO 此处应有一个架构图的装逼 JPG 图。
 
 未来考虑引入
 
-* [ ] 配置中心 Nacos
+* [ ] 配置中心 Apollo
 * [ ] 服务保障 Sentinel
 * [ ] 网关 Soul
 
